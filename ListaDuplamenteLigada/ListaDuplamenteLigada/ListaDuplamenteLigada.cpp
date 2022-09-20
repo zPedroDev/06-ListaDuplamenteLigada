@@ -3,9 +3,9 @@ using namespace std;
 
 // definicao de tipo
 struct NO {
+	NO* ant;
 	int valor;
 	NO* prox;
-	NO* ant;
 };
 
 NO* primeiro = NULL;
@@ -147,19 +147,43 @@ void inserirElemento()
 }
 
 
-// funções a serem implementadas no exericio
+// fun��es a serem implementadas no exericio
 void exibirReverso()
 {
-
+	NO* element = ultimo;
+	while (element != NULL) {
+		cout << element->valor << endl;
+		element = element->ant;
+	}
 }
 
 void excluirPrimeiroElemento()
 {
-
+	NO* aux = primeiro;
+	aux->ant = NULL;
+	aux->valor = aux->prox->valor;
+	aux->prox = aux->prox->prox;
+	cout << "Excluido com sucesso!\n\n\n";
 }
 
 void excluirUltimoElemento()
 {
+	NO* aux = primeiro; 
+	NO* lastElement = ultimo;
+	if (aux != NULL) {
+		if (aux->prox == NULL) {
+			aux = NULL;
+			lastElement = NULL;
+		}
+		else {
+			while (aux->prox->prox != NULL)
+				aux = aux->prox;
+				aux->prox = NULL;
+				ultimo = aux;
+				free(aux->prox);
+				cout << "Excluido com sucesso!\n\n\n";
+		}
+	}
 
 }
 
