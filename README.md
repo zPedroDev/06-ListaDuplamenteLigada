@@ -1,17 +1,4 @@
-# Lista Duplamente Ligada 
----
+# Pedro Tenerelli
 
-## Objetivos
-
-Ao concluir esta atividade você deverá ter compreendido os seguintes conceitos:
-*  operações diversas com uma lista duplamente ligada
-*  
-
-
-## Atividade Proposta
-
-Faça um **fork** deste repositório e realize as seguintes atividades: 
-
-- [ ] Implemente a função excluirUltimoElemento
-- [ ] Implemente a função excluirPrimeiroElemento
-- [ ] Implemente a função exibirReverso
+- pedro.goncalves22@fatec.sp.gov.br
+- RA: 0050832211024
